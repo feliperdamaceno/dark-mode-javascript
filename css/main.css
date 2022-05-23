@@ -1,0 +1,123 @@
+/* =-=-=-=-=-=-=-=-= Import Section =-=-=-=-=-=-=-=-= */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+/* =-=-=-=-=-=-=-=-= General Styles =-=-=-=-=-=-=-=-= */
+
+:root {
+  /* Font Styles */
+  --fs-400: 1.6rem;
+  --fs-600: 2.2rem;
+
+  --ff-regular: "Raleway", sans-serif;
+
+  /* Colors */
+  --text-color: #212121;
+  --bg-color: #efefef;
+  --title-color: #efefef;
+  --accent-color: #1e90ff;
+}
+
+.dark-mode {
+  --text-color: #212121;
+  --text-color: #efefef;
+  --bg-color: #343333;
+  --title-color: #1e90ff;
+  --accent-color: #121212;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--text-color);
+  margin: 0;
+  height: 100vh;
+  font-size: var(--fs-400);
+  font-family: var(--ff-regular);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* =-=-=-=-=-=-=-=-= Card Styles =-=-=-=-=-=-=-=-= */
+
+.card {
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  max-width: 65rem;
+  margin: 0 1rem;
+}
+
+.card-header {
+  background-color: var(--accent-color);
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 2rem 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: var(--fs-600);
+  color: var(--title-color);
+}
+
+.card-button input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.card-button label {
+  cursor: pointer;
+  position: relative;
+}
+
+.card-button label::before {
+  content: "";
+  background-color: var(--bg-color);
+  border-radius: 50rem;
+
+  height: 2rem;
+  width: 4rem;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.card-button label::after {
+  content: "";
+  background-color: var(--text-color);
+  border-radius: 50%;
+
+  width: 1.8rem;
+  height: 1.8rem;
+
+  position: absolute;
+  transform: translate(-100%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: transform 200ms ease-in;
+}
+
+.card-button input:checked + label::after {
+  transform: translate(0, -50%);
+}
+
+.card-main {
+  padding: 2rem 4rem 4rem;
+}
