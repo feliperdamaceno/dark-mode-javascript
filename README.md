@@ -1,5 +1,7 @@
 ## JavaScript: Dark Mode Toggle
 
+![dark-mode-showcase](app-showcase/dark-mode-showcase.gif)
+
 This project is an implementation of Dark Mode made in pure JavaScript.
 
 As a small project, I tried to get things done in a simple and organized way. The implementation includes the LocalStorage to keep the user preferences even if the browser is closed or reloaded.
